@@ -501,3 +501,15 @@ function polyglotwannabe_scripts_loader() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'polyglotwannabe_scripts_loader' );
+
+
+
+// if is_archive() load masonry package o c'è già?
+// <script src="js/masonry.pkgd.min.js" async></script>
+
+// rimuovo quando compilo l'scss
+function custom_scripts_loader() {
+	wp_enqueue_style( 'style-custom', get_template_directory_uri() . '/style-custom.css', array(), null );
+   wp_enqueue_script('masonry-pkgd-min', get_template_directory_uri() . '/assets/js/masonry.pkgd.min.js', array(), false, true );
+}
+add_action( 'wp_enqueue_scripts', 'custom_scripts_loader' );

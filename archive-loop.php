@@ -7,7 +7,8 @@ polyglotwannabe_content_nav( 'nav-above' );
 
 if ( have_posts() ) :
 ?>
-	<div class="row">
+	<!-- <div class="row"> -->
+   <div class="row" data-masonry='{"percentPosition": true }'>
 	<?php
 		while ( have_posts() ) :
 			the_post();
