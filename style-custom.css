@@ -1,19 +1,5 @@
-.bg-dark-gradient {
-   background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%);
-}
-
-.bg-pastel {
-   background-color: #e1eeed;
-}
-
 body, h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
    font-family: 'Georgia', serif;
-}
-
-.flatten-it .card {
-   background-color: #fff;
-   border-radius: 0;
-   border: none;
 }
 
 a {
@@ -23,6 +9,30 @@ a {
 
 a:hover {
    color: #1e4440;
+}
+
+#footer {
+   background-color: #c0d8d6;
+}
+
+#footer p {
+   margin-top: 1rem;
+}
+
+
+
+.bg-dark-gradient {
+   background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+.bg-pastel {
+   background-color: #e1eeed;
+}
+
+.flatten-it .card {
+   background-color: #fff;
+   border-radius: 0;
+   border: none;
 }
 
 .card-img-overlay a {
