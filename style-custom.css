@@ -34,6 +34,10 @@ a:hover, .nav-link:focus, .nav-link:hover {
    background-color: #e1eeed;
 }
 
+.text-pastel {
+   color: #628884;
+}
+
 .flatten-it .card {
    background-color: #fff;
    border-radius: 0;
@@ -47,4 +51,19 @@ a:hover, .nav-link:focus, .nav-link:hover {
 
 .card-img-overlay a:hover {
    color: #bfdedb;
+}
+
+.single-post article .nav-tabs {
+   border-bottom: 1px solid #ffffff;
+   margin-bottom: 0.5rem!important;
+   font-size: .875em;
+}
+
+.single-post article .nav-tabs .nav-item.show .nav-link, .single-post article .nav-tabs .nav-link.active {
+   background-color: transparent;
+   border-color: #ffffff #ffffff #e1eeed;
+}
+
+.single-post article .nav-tabs .nav-link:focus, .single-post article .nav-tabs .nav-link:hover {
+   border-color: #ffffff #ffffff #e1eeed;
 }

@@ -13,7 +13,7 @@ the_post();
 ?>
 
 <!-- <div class="col-md-8 order-md-2 col-sm-12"> -->
-<div class="col-md-8 col-sm-12 p-4 bg-pastel">
+<div class="col-md-6 col-sm-12 p-4 bg-pastel">
    <div id="post-<?php the_ID(); ?>" <?php post_class('content'); ?>>
       <h1 class="entry-title"><?php the_title(); ?></h1>
       <?php
@@ -36,6 +36,6 @@ the_post();
    ?>
 </div><!-- /.col -->
 
-<div class="col-1 bg-pastel"></div>
+<div class="col-md-3 col-sm-12 bg-pastel"></div>
 <?php
 get_footer();
