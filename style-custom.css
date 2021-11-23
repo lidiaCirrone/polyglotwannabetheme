@@ -2,12 +2,12 @@ body, h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
    font-family: 'Georgia', serif;
 }
 
-a {
+a, .nav-link {
    color: #628884;
    transition: color 0.5s;
 }
 
-a:hover {
+a:hover, .nav-link:focus, .nav-link:hover {
    color: #1e4440;
 }
 
@@ -17,6 +17,11 @@ a:hover {
 
 #footer p {
    margin-top: 1rem;
+}
+
+.btn-primary, .wp-block-button .wp-block-button__link {
+   background-color: #92b9b7;
+   border-color: #92b9b7;
 }
 
 
