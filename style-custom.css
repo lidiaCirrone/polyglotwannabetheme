@@ -44,12 +44,12 @@ a:hover, .nav-link:focus, .nav-link:hover {
    border: none;
 }
 
-.card-img-overlay a {
+#masonry-container .card-with-img a {
    color: #fff;
    transition: color 0.5s;
 }
 
-.card-img-overlay a:hover {
+#masonry-container .card-with-img a:hover {
    color: #bfdedb;
 }
 
