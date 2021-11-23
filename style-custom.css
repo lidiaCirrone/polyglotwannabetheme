@@ -24,3 +24,12 @@ a {
 a:hover {
    color: #1e4440;
 }
+
+.card-img-overlay a {
+   color: #fff;
+   transition: color 0.5s;
+}
+
+.card-img-overlay a:hover {
+   color: #bfdedb;
+}
