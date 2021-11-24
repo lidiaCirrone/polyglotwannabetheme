@@ -7,11 +7,11 @@ a, .nav-link {
    transition: color 0.5s;
 }
 
-a:hover, .nav-link:focus, .nav-link:hover {
-   color: #1e4440;
+a:hover, .nav-link:focus, .nav-link:hover, body.admin-bar .edit-link a:hover, body.admin-bar .edit-link a:focus {
+   color: #1e4440!important;
 }
 
-#footer {
+#footer, body.admin-bar .edit-link a {
    background-color: #92b9b7;
 }
 
