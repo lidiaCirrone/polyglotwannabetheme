@@ -6,10 +6,17 @@
 
 get_header();
 get_sidebar();
+
+$post_cols = 6;
+$spacer_cols = 3;
+
+if (has_post_thumbnail()) :
+   $post_cols = 8;
+   $spacer_cols = 1;
+endif;
 ?>
 
-
-<div class="col-md-6 col-sm-12 p-4 bg-pastel">
+<div class="col-md-<?php echo $post_cols; ?> col-sm-12 p-4 bg-pastel">
 
    <?php
 
@@ -65,7 +72,7 @@ get_sidebar();
    ?>
 </div>
 
-<div class="col-md-3 col-sm-12 bg-pastel"></div>
+<div class="col-md-<?php echo $spacer_cols; ?> col-sm-12 bg-pastel"></div>
 <?php
 
 get_footer();
