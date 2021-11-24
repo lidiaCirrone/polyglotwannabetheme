@@ -9,13 +9,24 @@
 
    <?php if (has_post_thumbnail()) : ?>
       <div class="card card-with-img">
-      <a href="<?php the_permalink(); ?>" title="<?php printf(esc_attr__('Permalink to %s', 'polyglotwannabe'), the_title_attribute('echo=0')); ?>" rel="bookmark">
-      <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>" alt="" class="card-img">
-         <div class="card-img-overlay d-flex flex-column justify-content-end bg-dark-gradient">
-            <h5 class="card-title"><?php the_title(); ?>
+         <a href="<?php the_permalink(); ?>" title="<?php printf(esc_attr__('Permalink to %s', 'polyglotwannabe'), the_title_attribute('echo=0')); ?>" rel="bookmark">
+            <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>" alt="" class="card-img">
+            <div class="card-img-overlay d-flex flex-column justify-content-end bg-dark-gradient">
+               <h5 class="card-title"><?php the_title(); ?>
+               </h5>
+            </div>
+         </a>
+      </div>
+
+   <?php elseif (in_category('definitions')) : ?>
+      <div class="card">
+         <div class="card-body">
+            <h5 class="card-title">
+               <?php the_title(); ?>
             </h5>
+            <hr class="w-25">
+            <div class="card-text entry-content small text-pastel"><?php the_content(); ?></div>
          </div>
-   </a>
       </div>
 
    <?php else : ?>
@@ -39,7 +50,7 @@
             <?php
             endif;
             ?>
-            <p class="card-text entry-content">
+            <div class="card-text entry-content">
                <?php
                if (is_search() or has_excerpt()) :
                   the_excerpt();
@@ -48,9 +59,9 @@
                endif;
                ?>
                <?php wp_link_pages(array('before' => '<div class="page-link"><span>' . esc_html__('Pages:', 'polyglotwannabe') . '</span>', 'after' => '</div>')); ?>
-            </p>
+            </div>
             <footer class="entry-meta text-end">
-               <a href="<?php echo get_the_permalink(); ?>"><?php esc_html_e('...', 'polyglotwannabe'); ?></a>
+               <a href="<?php echo get_the_permalink(); ?>"><?php esc_html_e('+', 'polyglotwannabe'); ?></a>
             </footer>
          </div>
       </div>
