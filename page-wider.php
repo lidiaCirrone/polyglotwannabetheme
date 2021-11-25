@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Template Name: Page (Full width 9)
- * Description: Page template full width.
+ * Template Name: Page (Wider 8+1)
+ * Description: Page template that occupies two more columns on the right.
  *
  */
 
@@ -10,7 +10,7 @@ get_header();
 get_sidebar();
 the_post();
 ?>
-<div class="col-md-9 col-sm-12 p-4 bg-pastel">
+<div class="col-md-8 col-sm-12 p-4 bg-pastel">
    <div id="post-<?php the_ID(); ?>" <?php post_class('content'); ?>>
       <h1 class="entry-title"><?php the_title(); ?></h1>
       <?php
@@ -30,5 +30,6 @@ the_post();
    endif;
    ?>
 </div>
+<div class="col-md-1 col-sm-12 bg-pastel"></div>
 <?php
 get_footer();
