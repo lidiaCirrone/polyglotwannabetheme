@@ -7,7 +7,6 @@
  */
 
 get_header();
-// get_sidebar();
 the_post();
 ?>
 
@@ -15,7 +14,11 @@ the_post();
 
 <div class="col-md-8 col-sm-12 p-4 bg-pastel">
    <div id="post-<?php the_ID(); ?>" <?php post_class('content'); ?>>
-      <h1 class="entry-title"><?php the_title(); ?></h1>
+   
+   <?php if (!is_front_page()) : ?>
+   <h1 class="entry-title"><?php the_title(); ?></h1>
+   <?php endif; ?>
+
       <?php
       the_content();
       wp_link_pages(
