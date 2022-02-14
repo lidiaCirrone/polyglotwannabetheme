@@ -5,18 +5,18 @@
  */
 
 get_header();
-get_sidebar();
-
-$post_cols = 6;
-$spacer_cols = 3;
 
 if (has_post_thumbnail()) :
    $post_cols = 8;
-   $spacer_cols = 1;
+   $offset_cols = 2;
+else :
+   $post_cols = 6;
+   $offset_cols = 3;
 endif;
+
 ?>
 
-<div class="col-md-<?php echo $post_cols; ?> col-sm-12 p-4 bg-pastel">
+<div class="col-md-<?php echo $post_cols; ?> col-sm-12 offset-md-<?php echo $offset_cols; ?> offset-sm-0 p-4 bg-pastel">
 
    <?php
 
@@ -72,7 +72,7 @@ endif;
    ?>
 </div>
 
-<div class="col-md-<?php echo $spacer_cols; ?> col-sm-12 bg-pastel"></div>
+<div class="col-md-<?php echo $offset_cols; ?> col-sm-12 bg-pastel"></div>
 <?php
 
 get_footer();
