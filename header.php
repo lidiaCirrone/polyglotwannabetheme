@@ -26,4 +26,9 @@ $search_enabled  = get_theme_mod('search_enabled', '1');
       elseif (isset($navbar_position) && 'fixed_bottom' === $navbar_position) : echo ' style="padding-bottom: 100px;"';
       endif; ?>>
 
+         <div class="row bg-white text-center py-5 mb-3">
+            <h2 id="polyglot-wannabe"> <a href="<?php echo site_url();?>" data-type="URL">polyglot wannabe</a> </h2>
+            <p> unsolicited facts about languages </p>
+         </div>
+
          <div class="row">
