@@ -576,7 +576,7 @@ function pw_masonry_posts_cb($attributes)
                                  <?php the_title(); ?>
                               </h5>
                               <hr class="w-25">
-                              <div class="card-text entry-content small text-pastel custom-link"><?php the_content(); ?></div>
+                              <div class="card-text entry-content text-pastel custom-link"><?php the_content(); ?></div>
                            </div>
                         </div>
 
