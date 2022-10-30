@@ -60,9 +60,6 @@
                ?>
                <?php wp_link_pages(array('before' => '<div class="page-link"><span>' . esc_html__('Pages:', 'polyglotwannabe') . '</span>', 'after' => '</div>')); ?>
             </div>
-            <footer class="entry-meta text-end">
-               <a href="<?php echo get_the_permalink(); ?>"><?php esc_html_e('+', 'polyglotwannabe'); ?></a>
-            </footer>
          </div>
       </div>
 
