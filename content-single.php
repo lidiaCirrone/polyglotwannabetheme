@@ -13,17 +13,16 @@
       if ('post' === get_post_type()) :
       ?>
          <div class="entry-meta mt-0">
-            
-            <!-- <h6 class="card-subtitle mb-3"><small class="text-muted entry-meta"> -->
-                     <!-- — 6 august 2020, h15.22 -->
-                     <?php
-                     printf(
-                        wp_kses_post(__('posted on <time class="entry-date" datetime="%1$s">%2$s</time>', 'polyglotwannabe')),
-                        esc_attr(get_the_date('c')),
-                        esc_html(get_the_date() . ' at ' . get_the_time())
-                     )
-                     ?>
-                  <!-- </small></h6> -->
+
+            <h6 class="card-subtitle mb-3"><small class="text-muted entry-meta">
+                  <?php
+                  printf(
+                     wp_kses_post(__('posted on <time class="entry-date" datetime="%1$s">%2$s</time>', 'polyglotwannabe')),
+                     esc_attr(get_the_date('c')),
+                     esc_html(get_the_date() . ' at ' . get_the_time())
+                  )
+                  ?>
+               </small></h6>
          </div><!-- /.entry-meta -->
       <?php
       endif;
