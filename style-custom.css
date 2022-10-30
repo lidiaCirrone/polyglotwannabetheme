@@ -44,6 +44,10 @@ a:hover, .nav-link:focus, .nav-link:hover, body.admin-bar .edit-link a:hover, bo
    color: #628884;
 }
 
+.custom-link a {
+   color: #aaa;
+}
+
 .flatten-it .card {
    background-color: #fff;
    border-radius: 0;
