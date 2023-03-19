@@ -63,6 +63,11 @@ a:hover, .nav-link:focus, .nav-link:hover, body.admin-bar .edit-link a:hover, bo
    color: #bfdedb!important;
 }
 
+.pw-masonry-pagination {
+   text-align: center;
+   margin-bottom: 50px;
+}
+
 .single-post article .nav-tabs {
    border-bottom: 1px solid #ffffff;
    margin-bottom: 0.5rem!important;

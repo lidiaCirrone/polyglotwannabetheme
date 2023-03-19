@@ -545,8 +545,14 @@ function pw_masonry_posts_cb($attributes)
       ?>
       <div class="col-12">
          <?php
+         global $paged;
+         $paged = (get_query_var('page')) ? get_query_var('page') : 1;
          $q = new WP_Query(array(
-            'post_type' => 'post'
+            'post_type' => 'post',
+            'posts_per_page' => 10,
+            'paged' => $paged,
+            'orderby' => 'date',
+            'order' => 'DESC',
          ));
          if ($q->have_posts()) :
          ?>
@@ -617,6 +623,22 @@ function pw_masonry_posts_cb($attributes)
                   </article>
                <?php
                endwhile;
+               ?>
+            </div>
+            <div class="pw-masonry-pagination">
+               <?php
+               $big = 999999999; // need an unlikely integer
+               echo paginate_links(
+                  array(
+                     'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+                     'format' => '/page/%#%',
+                     'current' => max(
+                        1,
+                        get_query_var('page')
+                     ),
+                     'total' => $q->max_num_pages //$q is your custom query
+                  )
+               );
                ?>
             </div>
          <?php
